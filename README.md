@@ -7,7 +7,7 @@ The analysis is done in the Home_Sales.ipynb notebook.
 I analysed the data to answer the following questions:
 
 
-1.What is the average price for a four-bedroom house sold for each year?
+What is the average price for a four-bedroom house sold for each year?
 
     ```sql
     SELECT 
@@ -21,7 +21,8 @@ I analysed the data to answer the following questions:
     
 ![alt text](AVG_4BR-1.png)
 
-2. What is the average price of a home for each year it was built that has three bedrooms and three bathrooms?
+What is the average price of a home for each year it was built that has three bedrooms and three bathrooms?
+
     ```sql
     SELECT
         date_built, 
@@ -31,10 +32,10 @@ I analysed the data to answer the following questions:
     GROUP BY date_built
     ORDER BY date_built
     ```
-
 ![alt text](YR_3B3B-1.png)
 
-3. What is the average price of a home for each year that has three bedrooms, three bathrooms, two floors, and is greater than or equal to 2,000 square feet?
+What is the average price of a home for each year that has three bedrooms, three bathrooms, two floors, and is greater than or equal to 2,000 square feet?
+
     ```sql
     SELECT
         date_built, 
@@ -44,10 +45,10 @@ I analysed the data to answer the following questions:
     GROUP BY date_built
     ORDER BY date_built
     ```
-
 ![alt text](YR_3B3B_2000SF-1.png)
 
-4. What is the "view" rating for the average price of a home where the homes are greater than or equal to $350,000?
+What is the "view" rating for the average price of a home where the homes are greater than or equal to $350,000?
+
     ```sql
     SELECT 
         view,
@@ -60,7 +61,7 @@ I analysed the data to answer the following questions:
 
 ![alt text](ViewRating-1.png)
 
-5. Comparing the runtime for the "view" rating for the average price of a home where the homes are greater than or equal to $350,000 (Q4) when we haven't cached the data, cached data, and when data is ppartitioned: 
+Using the cached data, run the last query that calculates the average price of a home per "view" rating having an average home price greater than or equal to $350,000. Determine the runtime and compare it to uncached runtime.
 
 **Standard runtime for Q4** :  0.79 seconds
 
